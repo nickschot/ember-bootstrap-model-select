@@ -19,7 +19,6 @@ With this addon installed, you have a new `controlType` of `model-select` availa
 
 ```hbs
 {{#bs-form model=yourModel as |form|}}  
-  {{form.element controlType="model-select" property="foo" label="My Other Model"}}
   {{#form.element controlType="model-select" label="My Relationship" property="myOtherModel" as |el|}}
     {{el.control
       modelName='my-other-model'

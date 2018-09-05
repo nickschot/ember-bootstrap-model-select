@@ -1,0 +1,15 @@
+.is-invalid {
+  .model-select {
+    .ember-power-select-trigger {
+      @extend .is-invalid;
+    }
+  }
+}
+
+.disabled {
+  .model-select {
+    .ember-power-select-selected-item {
+      color: $text-muted;
+    }
+  }
+}

@@ -1,13 +1,18 @@
 {
   "name": "ember-bootstrap-model-select",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Integrate ember-model-select into your ember-bootstrap forms.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-bootstrap",
+    "ember-model-select"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weddingshoppe/ember-bootstrap-model-select"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "Nick Schot <nickschot@webhub.nl>",
   "directories": {
     "doc": "doc",
     "test": "tests"

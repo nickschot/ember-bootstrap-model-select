@@ -1,0 +1,1 @@
+export { default } from 'ember-bootstrap-model-select/components/bs-form/element/control/model-select';

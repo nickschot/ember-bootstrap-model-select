@@ -3,6 +3,7 @@
 /dist
 /tests
 /tmp
+/.idea
 **/.gitkeep
 .bowerrc
 .editorconfig
@@ -15,6 +16,7 @@ bower.json
 ember-cli-build.js
 testem.js
 yarn.lock
+package-lock.json
 
 # ember-try
 .node_modules.ember-try/

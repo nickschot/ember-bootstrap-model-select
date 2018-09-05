@@ -15,21 +15,19 @@ ember install ember-bootstrap-model-select
 Usage
 ------------------------------------------------------------------------------
 
-With this addon installed, you have a new `controlType` of `model-select` available.
+With this addon installed, you have a new `controlType` of `model-select` available which enables you to set `belongsTo` relationships on the form.
 
 ```hbs
 {{#bs-form model=yourModel as |form|}}  
-  {{form.element controlType="model-select" property="foo" label="Choose" options=options}}
+  {{form.element controlType="model-select" property="foo" label="My Other Model"}}
+  {{#form.element controlType="model-select" label="My Relationship" property="myOtherModel" as |el|}}
+    {{el.control
+      modelName='my-other-model'
+      labelProperty='name'
+    }}
+  {{/form.element}}
 {{/bs-form}}
-```
 
-If your options array consists of objects, use the `optionLabelPath` to specify the property that should be used as the
-options label:
-
-```hbs
-{{#bs-form model=yourModel as |form|}}  
-  {{form.element controlType="power-select" property="foo" label="Choose" options=options optionLabelPath="title"}}
-{{/bs-form}}
 ```
 
 ## Copyright and license

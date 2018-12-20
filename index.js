@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-bootstrap-model-select'
+  name: require('./package').name
 };

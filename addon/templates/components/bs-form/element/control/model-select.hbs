@@ -1,4 +1,4 @@
-{{model-select
+{{#model-select
   modelName=modelName
   selectedModel=value
   labelProperty=labelProperty
@@ -72,3 +72,9 @@
   typeAheadMatcher=typeAheadMatcher
   verticalPosition=verticalPosition
 }}
+  {{#if hasBlock}}
+    {{yield model}}
+  {{else}}
+    {{get model labelProperty}}}
+  {{/if}}
+{{/model-select}}

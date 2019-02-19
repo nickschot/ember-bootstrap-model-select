@@ -6,7 +6,7 @@ import { computed } from '@ember/object';
 export default Control.extend(ControlValidationMixin, {
   layout,
 
-  concatenatedTriggerClass: computed('formFeedbackClass', 'triggerClass', function(){
+  concatenatedTriggerClass: computed('formFeedbackClass', 'triggerClass', 'disabled', function(){
     let s = `form-control`;
 
     if(this.get('formFeedbackClass')){
@@ -15,6 +15,10 @@ export default Control.extend(ControlValidationMixin, {
 
     if(this.get('triggerClass')){
       s += ` ${this.get('triggerClass')}`;
+    }
+
+    if(this.get('disabled')){
+      s += ` disabled`;
     }
 
     return s;

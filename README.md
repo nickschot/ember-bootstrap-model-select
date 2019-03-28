@@ -5,6 +5,14 @@ ember-bootstrap-model-select
 Integrate [ember-model-select](https://github.com/nickschot/ember-model-select) into your [ember-bootstrap](http;//www.ember.bootstrap.com)
 forms.
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
+
+
 Installation
 ------------------------------------------------------------------------------
 

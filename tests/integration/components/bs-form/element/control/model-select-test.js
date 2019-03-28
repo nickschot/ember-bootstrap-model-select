@@ -6,7 +6,6 @@ import hbs from 'htmlbars-inline-precompile';
 import { clickTrigger } from 'ember-power-select/test-support/helpers';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import defaultScenario from '../../../../../../../dummy/mirage/scenarios/default';
-import EmberObject from '@ember/object';
 
 module('Integration | Component | bs-form/element/control/model-select', function(hooks) {
   setupRenderingTest(hooks);
@@ -16,9 +15,6 @@ module('Integration | Component | bs-form/element/control/model-select', functio
     defaultScenario(this.server);
     
     this.set('user', null);
-    this.set('model', EmberObject.create({
-      user: null
-    }))
   });
 
   test('it renders as blockless control component', async function(assert) {
@@ -109,7 +105,7 @@ module('Integration | Component | bs-form/element/control/model-select', functio
 
   test('it passes power-select options', async function(assert) {
     await render(hbs`
-    {{#bs-form model=model as |form|}}
+    {{#bs-form model=this as |form|}}
       {{#form.element controlType="model-select" modelName="user" property="user" as |el|}}
         {{el.control
           modelName="user"
@@ -129,7 +125,7 @@ module('Integration | Component | bs-form/element/control/model-select', functio
 
   test('it passes model-select options', async function(assert) {
     await render(hbs`
-    {{#bs-form model=model as |form|}}
+    {{#bs-form model=this as |form|}}
       {{#form.element controlType="model-select" modelName="user" property="user" as |el|}}
         {{el.control
           modelName="user"

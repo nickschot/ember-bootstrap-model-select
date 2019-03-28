@@ -1,7 +1,7 @@
 ember-bootstrap-model-select
 ==============================================================================
 
-Integrate [ember-model-select](https://github.com/weddingshoppe/ember-model-select) into your [ember-bootstrap](http;//www.ember.bootstrap.com)
+Integrate [ember-model-select](https://github.com/nickschot/ember-model-select) into your [ember-bootstrap](http;//www.ember.bootstrap.com)
 forms.
 
 Installation
@@ -29,7 +29,14 @@ With this addon installed, you have a new `controlType` of `model-select` availa
 
 ```
 
-## Copyright and license
+Contributing
+------------------------------------------------------------------------------
 
-Code and documentation copyright 2018 [Wedding Shoppe Inc.](http://www.weddingshoppeinc.com) and contributors. Code released under [the MIT license](LICENSE.md).
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
 

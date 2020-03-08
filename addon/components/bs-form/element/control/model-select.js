@@ -1,14 +1,17 @@
 import Control from 'ember-bootstrap/components/bs-form/element/control';
-import ControlValidationMixin from 'ember-bootstrap/mixins/control-validation';
 import { computed } from '@ember/object';
+import formValidationClass from 'ember-bootstrap/utils/cp/form-validation-class';
 
-export default class ModelSelectControl extends Control.extend(ControlValidationMixin) {
-  @computed('formFeedbackClass', 'triggerClass', 'disabled')
+export default class ModelSelectControl extends Control {
+  @formValidationClass('validationType')
+  formValidationClass;
+
+  @computed('formValidationClass', 'triggerClass', 'disabled')
   get concatenatedTriggerClass(){
     let s = `form-control`;
 
-    if(this.get('formFeedbackClass')){
-      s += ` ${this.get('formFeedbackClass')}`;
+    if(this.get('formValidationClass')){
+      s += ` ${this.get('formValidationClass')}`;
     }
 
     if(this.get('triggerClass')){

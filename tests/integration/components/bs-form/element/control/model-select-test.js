@@ -13,20 +13,20 @@ module('Integration | Component | bs-form/element/control/model-select', functio
 
   hooks.beforeEach(function(){
     defaultScenario(this.server);
-    
+
     this.set('user', null);
   });
 
   test('it renders as blockless control component', async function(assert) {
     await render(hbs`
-    {{#bs-form model=this as |form|}}
-      {{#form.element controlType="model-select" property="user" as |el|}}
-        {{el.control
-          modelName="user"
-          labelProperty="name"
-        }}
-      {{/form.element}}
-    {{/bs-form}}`);
+    <BsForm @model={{this}} as |form|>
+      <form.element @controlType="model-select" @property="user" as |el|>
+        <el.control
+          @modelName="user"
+          @labelProperty="name"
+        />
+      </form.element>
+    </BsForm>`);
 
     assert.dom('.ember-power-select-trigger').exists({ count: 1 });
 
@@ -36,14 +36,14 @@ module('Integration | Component | bs-form/element/control/model-select', functio
 
   test('it renders as block control component', async function(assert) {
     await render(hbs`
-    {{#bs-form model=this as |form|}}
-      {{#form.element controlType="model-select" property="user" as |el|}}
-        {{el.control
-          modelName="user"
-          labelProperty="name"
-        }}
-      {{/form.element}}
-    {{/bs-form}}`);
+    <BsForm @model={{this}} as |form|>
+      <form.element @controlType="model-select" @property="user" as |el|>
+        <el.control
+          @modelName="user"
+          @labelProperty="name"
+        />
+      </form.element>
+    </BsForm>`);
 
     assert.dom('.ember-power-select-trigger').exists({ count: 1 });
 
@@ -53,69 +53,69 @@ module('Integration | Component | bs-form/element/control/model-select', functio
 
   test('it renders placeholder', async function(assert) {
     await render(hbs`
-    {{#bs-form model=this as |form|}}
-      {{#form.element controlType="model-select" property="user" placeholder="something" as |el|}}
-        {{el.control
-          modelName="user"
-          labelProperty="name"
-        }}
-      {{/form.element}}
-    {{/bs-form}}`);
+    <BsForm @model={{this}} as |form|>
+      <form.element @controlType="model-select" @property="user" @placeholder="something" as |el|>
+        <el.control
+          @modelName="user"
+          @labelProperty="name"
+        />
+      </form.element>
+    </BsForm>`);
     assert.dom('.ember-power-select-trigger').hasText('something');
 
     await render(hbs`
-    {{#bs-form model=this as |form|}}
-      {{#form.element controlType="model-select" property="user" placeholder="something" as |el|}}
-        {{#el.control
-          modelName="user"
-          labelProperty="name"
-        as |val|}}
+    <BsForm @model={{this}} as |form|>
+      <form.element @controlType="model-select" @property="user" @placeholder="something" as |el|>
+        <el.control
+          @modelName="user"
+          @labelProperty="name"
+        as |val|>
           {{val}}
-        {{/el.control}}
-      {{/form.element}}
-    {{/bs-form}}`);
+        </el.control>
+      </form.element>
+    </BsForm>`);
     assert.dom('.ember-power-select-trigger').hasText('something');
   });
 
   test('it can disable select', async function(assert) {
     await render(hbs`
-    {{#bs-form model=this as |form|}}
-      {{#form.element controlType="model-select" property="user" disabled=true as |el|}}
-        {{el.control
-          modelName="user"
-          labelProperty="name"
-        }}
-      {{/form.element}}
-    {{/bs-form}}`);
+    <BsForm @model={{this}} as |form|>
+      <form.element @controlType="model-select" @property="user" @disabled={{true}} as |el|>
+        <el.control
+          @modelName="user"
+          @labelProperty="name"
+        />
+      </form.element>
+    </BsForm>`);
     assert.dom('.ember-power-select-trigger').hasAttribute('aria-disabled');
 
     await render(hbs`
-    {{#bs-form model=this as |form|}}
-      {{#form.element controlType="model-select" property="user" disabled=true as |el|}}
-        {{#el.control
-          modelName="user"
-          labelProperty="name"
-        as |val|}}
+    <BsForm @model={{this}} as |form|>
+      <form.element @controlType="model-select" @property="user" @disabled={{true}} as |el|>
+        <el.control
+          @modelName="user"
+          @labelProperty="name"
+        as |val|>
           {{val}}
-        {{/el.control}}
-      {{/form.element}}
-    {{/bs-form}}`);
+        </el.control>
+      </form.element>
+    </BsForm>`);
     assert.dom('.ember-power-select-trigger').hasAttribute('aria-disabled');
   });
 
   test('it passes power-select options', async function(assert) {
     await render(hbs`
-    {{#bs-form model=this as |form|}}
-      {{#form.element controlType="model-select" modelName="user" property="user" as |el|}}
-        {{el.control
-          modelName="user"
-          labelProperty="name"
-          
-          searchEnabled=false
-          triggerClass="form-control"
-         }}
-      {{/form.element}}
-    {{/bs-form}}`);
+    <BsForm @model={{this}} as |form|>
+      <form.element @controlType="model-select" @property="user" as |el|>
+        <el.control
+          @modelName="user"
+          @labelProperty="name"
+
+          @searchEnabled={{false}}
+          @triggerClass="form-control"
+        />
+      </form.element>
+    </BsForm>`);
 
     assert.dom('.form-control').exists({ count: 1 });
 
@@ -125,16 +125,16 @@ module('Integration | Component | bs-form/element/control/model-select', functio
 
   test('it passes model-select options', async function(assert) {
     await render(hbs`
-    {{#bs-form model=this as |form|}}
-      {{#form.element controlType="model-select" modelName="user" property="user" as |el|}}
-        {{el.control
-          modelName="user"
-          labelProperty="name"
-          
-          pageSize=10
-         }}
-      {{/form.element}}
-    {{/bs-form}}`);
+    <BsForm @model={{this}} as |form|>
+      <form.element @controlType="model-select" @property="user" as |el|>
+        <el.control
+          @modelName="user"
+          @labelProperty="name"
+
+          @pageSize={{10}}
+        />
+      </form.element>
+    </BsForm>`);
 
     assert.dom('.form-control').exists({ count: 1 });
 

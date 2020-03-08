@@ -1,4 +1,20 @@
 
+## v1.0.0-beta.1 (2020-03-08)
+
+#### :boom: Breaking Change
+* [#13](https://github.com/nickschot/ember-bootstrap-model-select/pull/13) Support ember-bootstrap 3.x ([@nickschot](https://github.com/nickschot))
+* [#12](https://github.com/nickschot/ember-bootstrap-model-select/pull/12) ember-cli 3.16 & dependency updates ([@nickschot](https://github.com/nickschot))
+
+#### :rocket: Enhancement
+* [#13](https://github.com/nickschot/ember-bootstrap-model-select/pull/13) Support ember-bootstrap 3.x ([@nickschot](https://github.com/nickschot))
+
+#### :house: Internal
+* [#12](https://github.com/nickschot/ember-bootstrap-model-select/pull/12) ember-cli 3.16 & dependency updates ([@nickschot](https://github.com/nickschot))
+
+#### Committers: 1
+- Nick Schot ([@nickschot](https://github.com/nickschot))
+
+
 ## v0.1.0 (2019-03-28)
 
 #### :memo: Documentation

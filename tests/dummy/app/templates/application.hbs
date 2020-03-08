@@ -2,14 +2,14 @@
 
 {{outlet}}
 
-{{#bs-form model=this as |form|}}
-  {{#form.element controlType="model-select" modelName="user" property="user" as |el|}}
-    {{el.control
-      modelName="user"
-      labelProperty="name"
+<BsForm @model={{this}} as |form|>
+  <form.element @controlType="model-select" @modelName="user" @property="user" as |el|>
+    <el.control
+      @modelName="user"
+      @labelProperty="name"
 
-      searchEnabled=false
-      triggerClass="form-control"
-    }}
-  {{/form.element}}
-{{/bs-form}}
+      @searchEnabled={{false}}
+      @triggerClass="form-control"
+    />
+  </form.element>
+</BsForm>

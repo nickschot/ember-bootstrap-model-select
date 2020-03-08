@@ -1,0 +1,80 @@
+<ModelSelect
+  @modelName={{this.modelName}}
+  @selectedModel={{this.value}}
+  @labelProperty={{this.labelProperty}}
+  @searchProperty={{this.searchProperty}}
+  @searchKey={{this.searchKey}}
+  @loadDefaultOptions={{this.loadDefaultOptions}}
+  @infiniteScroll={{this.infiniteScroll}}
+  @pageSize={{this.pageSize}}
+  @query={{this.query}}
+  @debounceDuration={{this.debounceDuration}}
+  @withCreate={{this.withCreate}}
+  @buildSuggestion={{this.buildSuggestion}}
+
+  @perPageParam={{this.perPageParam}}
+  @pageParam={{this.pageParam}}
+  @totalPagesParam={{this.totalPagesParam}}
+
+  @oncreate={{this.oncreate}}
+
+  @afterOptionsComponent={{this.afterOptionsComponent}}
+  @allowClear={{this.allowClear}}
+  @animationEnabled={{this.animationEnabled}}
+  @ariaDescribedBy={{this.ariaDescribedBy}}
+  @ariaInvalid={{this.ariaInvalid}}
+  @ariaLabel={{this.ariaLabel}}
+  @ariaLabelledBy={{this.ariaLabelledBy}}
+  @beforeOptionsComponent={{this.beforeOptionsComponent}}
+  @buildSelection={{this.buildSelection}}
+  @calculatePosition={{this.calculatePosition}}
+  @closeOnSelect={{this.closeOnSelect}}
+  @defaultHighlighted={{this.defaultHighlighted}}
+  @destination={{this.destination}}
+  @disabled={{this.disabled}}
+  @dropdownClass={{this.dropdownClass}}
+  @extra={{this.extra}}
+  @groupComponent={{this.groupComponent}}
+  @highlightOnHover={{this.highlightOnHover}}
+  @horizontalPosition={{this.horizontalPosition}}
+  @initiallyOpened={{this.initiallyOpened}}
+  @loadingMessage={{this.loadingMessage}}
+  @eventType={{this.eventType}}
+  @matcher={{this.matcher}}
+  @matchTriggerWidth={{this.matchTriggerWidth}}
+  @noMatchesMessage={{this.noMatchesMessage}}
+  @onblur={{this.onblur}}
+  @onchange={{this.onChange}}
+  @onclose={{this.onclose}}
+  @onfocus={{this.onfocus}}
+  @oninput={{this.oninput}}
+  @onkeydown={{this.onkeydown}}
+  @onopen={{this.onopen}}
+  @options={{this.options}}
+  @optionsComponent={{this.optionsComponent}}
+  @placeholder={{this.placeholder}}
+  @placeholderComponent={{this.placeholderComponent}}
+  @preventScroll={{this.preventScroll}}
+  @renderInPlace={{this.renderInPlace}}
+  @scrollTo={{this.scrollTo}}
+  @search={{this.search}}
+  @searchEnabled={{this.searchEnabled}}
+  @searchField={{this.searchField}}
+  @searchMessage={{this.searchMessage}}
+  @searchPlaceholder={{this.searchPlaceholder}}
+  @selected={{this.selected}}
+  @selectedItemComponent={{this.selectedItemComponent}}
+  @tabindex={{this.tabindex}}
+  @triggerClass={{this.concatenatedTriggerClass}}
+  @triggerComponent={{this.triggerComponent}}
+  @triggerId={{this.triggerId}}
+  @triggerRole={{this.triggerRole}}
+  @typeAheadMatcher={{this.typeAheadMatcher}}
+  @verticalPosition={{this.verticalPosition}}
+as |model|>
+  {{#if hasBlock}}
+    {{yield model}}
+  {{else}}
+    {{get model this.labelProperty}}
+  {{/if}}
+</ModelSelect>
